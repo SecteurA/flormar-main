@@ -1,0 +1,23 @@
+name: Build and Deploy via SCP
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Copy files via SCP
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: '128.140.85.117'
+          username: 'root'
+          password: 'VRnKWTumTxdtU4WWXfxv'
+          source: '*'
+          target: '/var/www/flormar'

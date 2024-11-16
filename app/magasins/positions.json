@@ -1,0 +1,290 @@
+[
+    {
+        "storetitle": "Boulevard Mohammed 5 Casablanca",
+        "storeAddress": "Boulevard Mohammed 5 Casablanca",
+        "storephone": "",
+        "storelat": "33.5956132",
+        "storelng": "-7.6173945",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "Morocco Mall",
+        "storeAddress": "Morocco Mall,Angle Boulevard de la Corniche / Boulevard de l'Ocean Ain Diab, Casablanca, Yeniden açılış, yeni konsept.",
+        "storephone": "",
+        "storelat": "33.59627",
+        "storelng": "-7.67414",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "Mall Myriades Bouskoura",
+        "storeAddress": "Mall Myriades Bouskoura, Marrakech Road",
+        "storephone": "",
+        "storelat": "33.44975",
+        "storelng": "-7.63311",
+        "country": "Morocco",
+        "city": "Bouskoura"
+    },
+    {
+        "storetitle": "Marjane Khouribga",
+        "storeAddress": "Marjane Khouribga",
+        "storephone": "",
+        "storelat": "32.88602",
+        "storelng": "-6.92087",
+        "country": "Morocco",
+        "city": "Khouribga"
+    },
+    {
+        "storetitle": "Arribat Center",
+        "storeAddress": "Arribat Center",
+        "storephone": "",
+        "storelat": "34.00349",
+        "storelng": "-6.84565",
+        "country": "Morocco",
+        "city": "Rabat"
+    },
+    {
+        "storetitle": "Dar Bouazza",
+        "storeAddress": "Dar Bouazza",
+        "storephone": "",
+        "storelat": "33.52403",
+        "storelng": "-7.82592",
+        "country": "Morocco",
+        "city": "Tamaris"
+    },
+    {
+        "storetitle": "Carrefour Oujda Shop",
+        "storeAddress": "Carrefour Oujda Shop",
+        "storephone": "",
+        "storelat": "34.65946",
+        "storelng": "-1.90629",
+        "country": "Morocco",
+        "city": "Oujda"
+    },
+    {
+        "storetitle": "Marjane Ain Sebaa",
+        "storeAddress": "Marjane Ain Sebaa, Casablanca",
+        "storephone": "",
+        "storelat": "33.59551",
+        "storelng": "-7.53182",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "TANGER CITY CENTER",
+        "storeAddress": "TANGER CITY CENTER/TANGER-MOROCCO",
+        "storephone": "",
+        "storelat": "35.77347",
+        "storelng": "-5.78702",
+        "country": "Morocco",
+        "city": "Tanger"
+    },
+    {
+        "storetitle": "Marjane Mohammedia",
+        "storeAddress": "Marjane Mohammedia / Route secondaire 101, Mohammedi /Morocco",
+        "storephone": "",
+        "storelat": "33.68351",
+        "storelng": "-7.38485",
+        "country": "Morocco",
+        "city": "Mohammedia"
+    },
+    {
+        "storetitle": "Safi Mall",
+        "storeAddress": "Safi Mall,Label Gallery, Avenue Zerktouni, Safi",
+        "storephone": "",
+        "storelat": "32.29271",
+        "storelng": "-9.23253",
+        "country": "Morocco",
+        "city": "Safi"
+    },
+    {
+        "storetitle": "Socco Alto Mall",
+        "storeAddress": "Socco Alto MaLL Route de Boubana - 90040 – Tanger Morocco",
+        "storephone": "",
+        "storelat": "35.78142",
+        "storelng": "-5.84032",
+        "country": "Morocco",
+        "city": "Tangier"
+    },
+    {
+        "storetitle": "Marjane Hay Riad Rabat",
+        "storeAddress": "Marjane Hay Riad Rabat - Autoroute Rabat, Tanger , Rabat Morocco",
+        "storephone": "",
+        "storelat": "33.95595",
+        "storelng": "-6.87263",
+        "country": "Morocco",
+        "city": "Rabat"
+    },
+    {
+        "storetitle": "La Marina Mall",
+        "storeAddress": "Marjane, La Marina Mall, Boulevard des Almohades, Casablanca, Morocco",
+        "storephone": "",
+        "storelat": "33.60699",
+        "storelng": "-7.62105",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "Marjane Casabalanca California",
+        "storeAddress": "Marjane Casabalanca California quartier Californie, chemin tertiaire 1029, commune Aïn Chock – 20150 Morocco",
+        "storephone": "",
+        "storelat": "33.52823",
+        "storelng": "-7.62108",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "IBN Batouta Store",
+        "storeAddress": "IBN Batouta Store , Angle Bd Mohammed V et Youssef Ibn- Tachfine Tanger Morocco",
+        "storephone": "",
+        "storelat": "35.75946",
+        "storelng": "-5.83395",
+        "country": "Morocco",
+        "city": "Tanger"
+    },
+    {
+        "storetitle": "Marjane Sale",
+        "storeAddress": "Marjane Sale, Avenue Mohamed 5, Sale, Morocco",
+        "storephone": "",
+        "storelat": "34.07328",
+        "storelng": "-6.76709",
+        "country": "Morocco",
+        "city": "Salé"
+    },
+    {
+        "storetitle": "Borj Fes Mall",
+        "storeAddress": "Borj Fes Mall - Avenue Allal Al Fassi, Fès - Morocco",
+        "storephone": "",
+        "storelat": "34.04606",
+        "storelng": "-4.99471",
+        "country": "Morocco",
+        "city": "Fes"
+    },
+    {
+        "storetitle": "Agadir Assalam Jet Sakane",
+        "storeAddress": "Agadir Assalam Jet Sakane; Magasin 2, Immeuble 43, Jet Sakane, Hay Salam-Agadir",
+        "storephone": "",
+        "storelat": "30.42776",
+        "storelng": "-9.59811",
+        "country": "Morocco",
+        "city": "Agadir"
+    },
+    {
+        "storetitle": "Fes-Saada",
+        "storeAddress": "Fes-Saada / Route Ain Chkef Lot n°26 - Morocco",
+        "storephone": "",
+        "storelat": "34.00504",
+        "storelng": "-5.0105",
+        "country": "Morocco",
+        "city": "Fès"
+    },
+    {
+        "storetitle": "MEKNES STORE",
+        "storeAddress": "MEKNES STORE/Label Gallery Meknes",
+        "storephone": "",
+        "storelat": "33.89215",
+        "storelng": "-5.54042",
+        "country": "Morocco",
+        "city": "Meknes"
+    },
+    {
+        "storetitle": "Carre Eden Mall",
+        "storeAddress": "Carre Eden Mall, Bd Mohamed V Gueliz, Marrakech - Morocco Yeniden açılış, yeni konsept.",
+        "storephone": "",
+        "storelat": "31.63365",
+        "storelng": "-8.0089",
+        "country": "Morocco",
+        "city": "Marrakech"
+    },
+    {
+        "storetitle": "Marjane Magasine Derb Sultan",
+        "storeAddress": "Marjane Magasine Derb Sultan,BD Mohamed 6 Angle Bd Bouchaid Doukkali -Casablanca Morocco",
+        "storephone": "",
+        "storelat": "33.57342",
+        "storelng": "-7.60072",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "Abdal Shop",
+        "storeAddress": "Abdal Shop, 3 Avenue Al Abtal AGDAL, Rabat - Morocco",
+        "storephone": "",
+        "storelat": "34.00117",
+        "storelng": "-6.8477",
+        "country": "Morocco",
+        "city": "Rabat"
+    },
+    {
+        "storetitle": "Marjane Marrakech",
+        "storeAddress": "Marjane Marrakech/ Marjane Route de Casablanca , Galerie marchande, N° B22/ Morocco",
+        "storephone": "",
+        "storelat": "33.57311",
+        "storelng": "-7.58984",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "Anfaplace shopping center",
+        "storeAddress": "Anfaplace shopping center - Ain Diab, Bd de la Corniche, Casablanca - Morocco",
+        "storephone": "",
+        "storelat": "33.59813",
+        "storelng": "-7.66464",
+        "country": "Morocco",
+        "city": "Casablanca"
+    },
+    {
+        "storetitle": "Marjane Kenitra",
+        "storeAddress": "Marjane Kenitra,Route Sidi Allah El Behraoui, Kenitra / Morocco",
+        "storephone": "",
+        "storelat": "34.24115",
+        "storelng": "-6.57015",
+        "country": "Morocco",
+        "city": "Kenitra"
+    },
+    {
+        "storetitle": "El Jadida Morocco",
+        "storeAddress": "El Jadida Morocco",
+        "storephone": "",
+        "storelat": "33.23163",
+        "storelng": "-8.50071",
+        "country": "Morocco",
+        "city": "Mohammedia"
+    },
+    {
+        "storetitle": "Kenitra Shop Center",
+        "storeAddress": "Kenitra Shop Center Rue Amira Aicha, 40, Kénitra/MOROCCO",
+        "storephone": "",
+        "storelat": "34.26104",
+        "storelng": "-6.58444",
+        "country": "Morocco",
+        "city": "Kenitra"
+    },
+    {
+        "storetitle": "Agadir Founty, Marakech",
+        "storeAddress": "Agadir Founty, Marakech , Morocco",
+        "storephone": "",
+        "storelat": "30.39607",
+        "storelng": "-9.59239",
+        "country": "Morocco",
+        "city": "Agadir"
+    },
+    {
+        "storetitle": "Agdal Shop",
+        "storeAddress": "Agdal Shop, 97 Av Fal Ouled Oumeir Rabat-Morocco",
+        "storephone": "",
+        "storelat": "33.99606",
+        "storelng": "-6.84775",
+        "country": "Morocco",
+        "city": "Rabat"
+    },
+    {
+        "storetitle": "Marjane Ibn Tachfine",
+        "storeAddress": "Marjane Ibn Tachfine, Galerie marchande, centre commercial Marjane IBN TACHFINE, local R16, Casablanca",
+        "storephone": "",
+        "storelat": "33.58457",
+        "storelng": "-7.57236",
+        "country": "Morocco",
+        "city": "Casablanca"
+    }
+]

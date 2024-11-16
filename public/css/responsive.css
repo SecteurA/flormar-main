@@ -1,0 +1,113 @@
+/* Colors */
+/* Functions */
+@media (min-width: 1601px) {
+  #side-menu .content {
+    padding-top: 140px !important;
+  }
+}
+@media (max-width: 1600px) {
+  header #header-bottom ul.header-menu li {
+    margin: 0 4px;
+  }
+  header #header-bottom ul.header-menu li.get-offer a {
+    padding: 16px 24px;
+  }
+  header #header-bottom ul.header-menu li a {
+    font-size: 14px;
+  }
+}
+@media (max-width: 1439px) {
+  header ul.header-menu li.get-offer a {
+    padding: 16px;
+  }
+  header ul.header-menu li a {
+    text-align: center;
+  }
+}
+@media (min-width: 1200px) {
+  #side-menu .content {
+    padding-top: 100px;
+  }
+  #side-menu .content ul.menu {
+    display: flex;
+    gap: 24px;
+  }
+  #side-menu .content ul.menu li {
+    flex: 1;
+  }
+  #side-menu .content ul.menu li.menu-item-has-children > a svg {
+    display: none;
+  }
+  #side-menu .content ul.menu li a {
+    font-weight: 700;
+    font-size: 16px;
+  }
+  #side-menu .content ul.menu li ul.sub-menu {
+    max-height: fit-content;
+    background-color: transparent;
+  }
+  #side-menu .content ul.menu li ul.sub-menu li:hover {
+    background-color: rgba(33, 33, 33, 0.1);
+  }
+  #side-menu .content ul.menu li ul.sub-menu li a {
+    border-bottom: none;
+    line-height: 1.1;
+    font-size: 14px;
+    min-height: 48px;
+    height: initial;
+    font-weight: 400;
+  }
+}
+@media (max-width: 1199px) {
+  #side-menu .container {
+    margin: 0;
+    width: 100%;
+    max-width: 100%;
+  }
+  .post-header .post-title {
+    font-size: 34px;
+  }
+}
+@media (max-width: 991px) {
+  .registryForm {
+    width: 100%;
+    padding: 10px 40px;
+    background: #fff;
+    margin-right: 0;
+  }
+}
+@media (max-width: 767px) {
+  header #header-bottom a.logo svg {
+    height: 40px;
+    width: auto;
+  }
+  .post-content {
+    font-size: 14px;
+  }
+  .post-content h1 {
+    font-size: 24px;
+  }
+  .post-content h2 {
+    font-size: 20px;
+  }
+  .post-content h3 {
+    font-size: 18px;
+  }
+  .post-content h4,
+  .post-content h5 {
+    font-size: 16px;
+  }
+  .post-content p,
+  .post-content ul,
+  .post-content ol,
+  .post-content h1,
+  .post-content h2,
+  .post-content h3,
+  .post-content h4,
+  .post-content h5 {
+    margin: 16px 0;
+  }
+  #section-home-favorites .owl-nav {
+    display: none;
+  }
+}

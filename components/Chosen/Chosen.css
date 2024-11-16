@@ -1,0 +1,215 @@
+.Chosen .swiper-button-next,
+.Chosen .swiper-button-prev {
+  background-color: black;
+  /* left: 20px; */
+  height: 32px;
+  width: 32px;
+  font-size: 10px;
+}
+
+.Chosen .swiper-button-next {
+  /* left: inherit; */
+  /* right: 20px; */
+}
+
+.Chosen .swiper-button-next:hover,
+.Chosen .swiper-button-prev:hover {
+  background-color: #e45a80 !important;
+}
+
+.Chosen .swiper-slide {
+  width: calc(25% - 20px);
+
+  cursor: pointer;
+}
+
+.Chosen .swiper-container {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  position: relative;
+}
+
+.Chosen .swiper-slide img {
+  width: 100%;
+  height: 400px;
+  max-width: 320px;
+  display: flex;
+  background-color: white;
+}
+
+.Chosen {
+  background-color: #fceef2;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  margin-top: 20px;
+
+  background-image: url('../../public/bg.png');
+  background-position: 100% 0%;
+  background-repeat: no-repeat;
+}
+
+.Chosen h2 {
+  margin-bottom: 0.5rem;
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+  font-weight: 400;
+}
+
+.Chosen h2 span {
+  color: #a02f84;
+  font-weight: bold;
+}
+
+.Chosen .swiper {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.Chosen .swiper-slide {
+  width: fit-content;
+  position: relative;
+  width: 25%;
+  padding: 0 10px;
+  height: 100% !important;
+}
+
+.Chosen .swiper img {
+  width: 100%;
+  min-width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: 50% 50%;
+  margin-bottom: 10px;
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  display: flex;
+  object-position: center;
+
+  cursor: pointer;
+}
+
+.product-image {
+  position: relative;
+  width: 100%;
+  padding-bottom: 128%;
+  background-color: white;
+
+  cursor: pointer;
+}
+
+.product-bag {
+  position: absolute;
+  box-shadow: 0 10px 8px rgba(0, 0, 0, 0.04);
+
+  cursor: pointer;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 20px;
+  right: 20px;
+  font-size: 1.5rem;
+  height: 2.5rem !important;
+  position: absolute;
+  width: 2.5rem !important;
+  color: #e45a80;
+  border: solid 1px #0001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99;
+}
+
+.product-bag.active {
+  color: #a02f84;
+}
+
+.Chosen .swiper img.hidden {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Chosen .swiper img.hidden {
+  display: none;
+}
+
+.Chosen .swiper-slide:hover img.hidden {
+  display: flex;
+}
+
+.Chosen h3 {
+  font-weight: 400;
+  font-size: 12px;
+  margin-top: 10px;
+  max-width: 200px;
+  text-align: left;
+  /* height: 30px; */
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  cursor: pointer;
+}
+
+.Chosen h3.price {
+  font-size: 14px;
+  font-weight: 900;
+  margin-top: 0;
+  height: auto;
+}
+
+.Chosen .line {
+  width: 100%;
+  height: 1px;
+  background-color: #dddddd;
+  margin-top: 20px;
+}
+
+.colors {
+  display: flex;
+  gap: 5px;
+  margin-top: 4px;
+}
+
+.colors span {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+}
+
+@media (max-width: 1200px) {
+  .Chosen .swiper-container {
+    padding-left: 0rem;
+    padding-right: 0rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .Chosen .swiper-slide {
+    width: 33%;
+  }
+}
+
+@media (max-width: 760px) {
+  .Chosen .swiper-slide {
+    width: 50%;
+  }
+  .Chosen .swiper-button-next,
+  .Chosen .swiper-button-prev {
+    display: none;
+  }
+}
+
+@media (max-width: 560px) {
+  .Chosen h3 {
+    font-size: 12px;
+  }
+  .colors span {
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+  }
+  .Chosen .swiper-slide {
+    /* width: 200px; */
+  }
+}

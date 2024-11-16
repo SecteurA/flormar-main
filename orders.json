@@ -1,0 +1,1342 @@
+{
+    "namespace": "wc\/v3",
+    "methods": [
+        "GET",
+        "POST"
+    ],
+    "endpoints": [
+        {
+            "methods": [
+                "GET"
+            ],
+            "args": {
+                "context": {
+                    "description": "Le contexte dans lequel la demande est faite\u00a0; cela d\u00e9termine les champs renvoy\u00e9s.",
+                    "type": "string",
+                    "enum": [
+                        "view",
+                        "edit"
+                    ],
+                    "default": "view",
+                    "required": false
+                },
+                "page": {
+                    "description": "Page courante de la collection.",
+                    "type": "integer",
+                    "default": 1,
+                    "minimum": 1,
+                    "required": false
+                },
+                "per_page": {
+                    "description": "Nombre maximal d\u2019articles \u00e0 retourner dans le jeu de r\u00e9sultats.",
+                    "type": "integer",
+                    "default": 10,
+                    "minimum": 1,
+                    "maximum": 100,
+                    "required": false
+                },
+                "search": {
+                    "description": "Limiter les r\u00e9sultats \u00e0 ceux correspondant \u00e0 une cha\u00eene.",
+                    "type": "string",
+                    "required": false
+                },
+                "after": {
+                    "description": "Limiter les r\u00e9ponses aux ressources publi\u00e9es apr\u00e8s une certaine date conforme ISO8601.",
+                    "type": "string",
+                    "format": "date-time",
+                    "required": false
+                },
+                "before": {
+                    "description": "Limiter les r\u00e9ponses aux ressources publi\u00e9es avant une certaine date conforme ISO8601.",
+                    "type": "string",
+                    "format": "date-time",
+                    "required": false
+                },
+                "modified_after": {
+                    "description": "Limiter la r\u00e9ponse aux ressources modifi\u00e9es apr\u00e8s une date de conformit\u00e9 ISO8601 donn\u00e9e.",
+                    "type": "string",
+                    "format": "date-time",
+                    "required": false
+                },
+                "modified_before": {
+                    "description": "Limiter la r\u00e9ponse aux ressources modifi\u00e9es avant une date de conformit\u00e9 ISO8601 donn\u00e9e.",
+                    "type": "string",
+                    "format": "date-time",
+                    "required": false
+                },
+                "dates_are_gmt": {
+                    "description": "Utiliser ou non les dates de publication GMT pour la limitation de la r\u00e9ponse par date de publication ou de modification.",
+                    "type": "boolean",
+                    "default": false,
+                    "required": false
+                },
+                "exclude": {
+                    "description": "S\u2019assurer que le jeu de r\u00e9sultats exclut des IDs sp\u00e9cifiques.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "default": [],
+                    "required": false
+                },
+                "include": {
+                    "description": "Limiter le jeu de r\u00e9sultats aux identifiants sp\u00e9cifiques.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "default": [],
+                    "required": false
+                },
+                "offset": {
+                    "description": "Compenser le jeu de r\u00e9sultats par un nombre sp\u00e9cifique d&rsquo;articles.",
+                    "type": "integer",
+                    "required": false
+                },
+                "order": {
+                    "description": "Attribut de tri de commande croissant ou d\u00e9croissant.",
+                    "type": "string",
+                    "default": "desc",
+                    "enum": [
+                        "asc",
+                        "desc"
+                    ],
+                    "required": false
+                },
+                "orderby": {
+                    "description": "Trier la collection par attribut d\u2019objet.",
+                    "type": "string",
+                    "default": "date",
+                    "enum": [
+                        "date",
+                        "id",
+                        "include",
+                        "title",
+                        "slug",
+                        "modified"
+                    ],
+                    "required": false
+                },
+                "parent": {
+                    "description": "Limiter le jeu de r\u00e9sultats \u00e0 ceux d\u2019IDs parent particuliers.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "default": [],
+                    "required": false
+                },
+                "parent_exclude": {
+                    "description": "Limiter le jeu de r\u00e9sultats \u00e0 tous les articles except\u00e9s ceux disposant d&rsquo;un ID parent particulier.",
+                    "type": "array",
+                    "items": {
+                        "type": "integer"
+                    },
+                    "default": [],
+                    "required": false
+                },
+                "status": {
+                    "default": "any",
+                    "description": "Limiter les r\u00e9sultats aux commandes qui ont les \u00e9tats sp\u00e9cifiques.",
+                    "type": "array",
+                    "items": {
+                        "type": "string",
+                        "enum": [
+                            "any",
+                            "trash",
+                            "auto-draft",
+                            "pending",
+                            "delivered",
+                            "received",
+                            "processing",
+                            "on-hold",
+                            "completed",
+                            "cancelled",
+                            "refunded",
+                            "failed",
+                            "checkout-draft"
+                        ]
+                    },
+                    "required": false
+                },
+                "customer": {
+                    "description": "Limiter le jeu de r\u00e9sultats aux commandes affect\u00e9es \u00e0 un client sp\u00e9cifique.",
+                    "type": "integer",
+                    "required": false
+                },
+                "product": {
+                    "description": "Limiter le jeu de r\u00e9sultats aux commandes affect\u00e9es \u00e0 un produit sp\u00e9cifique.",
+                    "type": "integer",
+                    "required": false
+                },
+                "dp": {
+                    "default": 2,
+                    "description": "Nombre de d\u00e9cimales \u00e0 utiliser dans chaque ressource.",
+                    "type": "integer",
+                    "required": false
+                },
+                "order_item_display_meta": {
+                    "default": false,
+                    "description": "Affichez uniquement la m\u00e9ta qui est cens\u00e9e s\u2019afficher pour une commande.",
+                    "type": "boolean",
+                    "required": false
+                },
+                "include_meta": {
+                    "default": [],
+                    "description": "Limitez meta_data \u00e0 des cl\u00e9s sp\u00e9cifiques.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "required": false
+                },
+                "exclude_meta": {
+                    "default": [],
+                    "description": "V\u00e9rifiez que meta_data exclut des cl\u00e9s sp\u00e9cifiques.",
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "required": false
+                }
+            }
+        },
+        {
+            "methods": [
+                "POST"
+            ],
+            "args": {
+                "parent_id": {
+                    "description": "ID de commande parente.",
+                    "type": "integer",
+                    "required": false
+                },
+                "status": {
+                    "default": "pending",
+                    "description": "\u00c9tat de la commande.",
+                    "type": "string",
+                    "enum": [
+                        "auto-draft",
+                        "pending",
+                        "delivered",
+                        "received",
+                        "processing",
+                        "on-hold",
+                        "completed",
+                        "cancelled",
+                        "refunded",
+                        "failed",
+                        "checkout-draft"
+                    ],
+                    "required": false
+                },
+                "currency": {
+                    "default": "MAD",
+                    "description": "Devise avec laquelle la commande a \u00e9t\u00e9 cr\u00e9\u00e9e, au format ISO.",
+                    "type": "string",
+                    "enum": [
+                        "AED",
+                        "AFN",
+                        "ALL",
+                        "AMD",
+                        "ANG",
+                        "AOA",
+                        "ARS",
+                        "AUD",
+                        "AWG",
+                        "AZN",
+                        "BAM",
+                        "BBD",
+                        "BDT",
+                        "BGN",
+                        "BHD",
+                        "BIF",
+                        "BMD",
+                        "BND",
+                        "BOB",
+                        "BRL",
+                        "BSD",
+                        "BTC",
+                        "BTN",
+                        "BWP",
+                        "BYR",
+                        "BYN",
+                        "BZD",
+                        "CAD",
+                        "CDF",
+                        "CHF",
+                        "CLP",
+                        "CNY",
+                        "COP",
+                        "CRC",
+                        "CUC",
+                        "CUP",
+                        "CVE",
+                        "CZK",
+                        "DJF",
+                        "DKK",
+                        "DOP",
+                        "DZD",
+                        "EGP",
+                        "ERN",
+                        "ETB",
+                        "EUR",
+                        "FJD",
+                        "FKP",
+                        "GBP",
+                        "GEL",
+                        "GGP",
+                        "GHS",
+                        "GIP",
+                        "GMD",
+                        "GNF",
+                        "GTQ",
+                        "GYD",
+                        "HKD",
+                        "HNL",
+                        "HRK",
+                        "HTG",
+                        "HUF",
+                        "IDR",
+                        "ILS",
+                        "IMP",
+                        "INR",
+                        "IQD",
+                        "IRR",
+                        "IRT",
+                        "ISK",
+                        "JEP",
+                        "JMD",
+                        "JOD",
+                        "JPY",
+                        "KES",
+                        "KGS",
+                        "KHR",
+                        "KMF",
+                        "KPW",
+                        "KRW",
+                        "KWD",
+                        "KYD",
+                        "KZT",
+                        "LAK",
+                        "LBP",
+                        "LKR",
+                        "LRD",
+                        "LSL",
+                        "LYD",
+                        "MAD",
+                        "MDL",
+                        "MGA",
+                        "MKD",
+                        "MMK",
+                        "MNT",
+                        "MOP",
+                        "MRU",
+                        "MUR",
+                        "MVR",
+                        "MWK",
+                        "MXN",
+                        "MYR",
+                        "MZN",
+                        "NAD",
+                        "NGN",
+                        "NIO",
+                        "NOK",
+                        "NPR",
+                        "NZD",
+                        "OMR",
+                        "PAB",
+                        "PEN",
+                        "PGK",
+                        "PHP",
+                        "PKR",
+                        "PLN",
+                        "PRB",
+                        "PYG",
+                        "QAR",
+                        "RON",
+                        "RSD",
+                        "RUB",
+                        "RWF",
+                        "SAR",
+                        "SBD",
+                        "SCR",
+                        "SDG",
+                        "SEK",
+                        "SGD",
+                        "SHP",
+                        "SLL",
+                        "SOS",
+                        "SRD",
+                        "SSP",
+                        "STN",
+                        "SYP",
+                        "SZL",
+                        "THB",
+                        "TJS",
+                        "TMT",
+                        "TND",
+                        "TOP",
+                        "TRY",
+                        "TTD",
+                        "TWD",
+                        "TZS",
+                        "UAH",
+                        "UGX",
+                        "USD",
+                        "UYU",
+                        "UZS",
+                        "VEF",
+                        "VES",
+                        "VND",
+                        "VUV",
+                        "WST",
+                        "XAF",
+                        "XCD",
+                        "XOF",
+                        "XPF",
+                        "YER",
+                        "ZAR",
+                        "ZMW"
+                    ],
+                    "required": false
+                },
+                "customer_id": {
+                    "default": 0,
+                    "description": "ID utilisateur propri\u00e9taire de la commande. 0 pour les invit\u00e9s.",
+                    "type": "integer",
+                    "required": false
+                },
+                "customer_note": {
+                    "description": "Note laiss\u00e9e par le client lors de la commande.",
+                    "type": "string",
+                    "required": false
+                },
+                "billing": {
+                    "description": "Adresse de facturation.",
+                    "type": "object",
+                    "properties": {
+                        "first_name": {
+                            "description": "Pr\u00e9nom.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "last_name": {
+                            "description": "Nom.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "company": {
+                            "description": "Nom de l&rsquo;entreprise.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "address_1": {
+                            "description": "Adresse ligne 1",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "address_2": {
+                            "description": "Adresse ligne 2",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "city": {
+                            "description": "Nom de la ville.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "state": {
+                            "description": "Code ISO ou nom de l&rsquo;\u00e9tat, province ou quartier.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "postcode": {
+                            "description": "Code postal.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "country": {
+                            "description": "Code pays au format ISO 3166-1 alpha-2.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "email": {
+                            "description": "E-mail.",
+                            "type": [
+                                "string",
+                                "null"
+                            ],
+                            "format": "email",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "phone": {
+                            "description": "Num\u00e9ro de t\u00e9l\u00e9phone",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        }
+                    },
+                    "required": false
+                },
+                "shipping": {
+                    "description": "Adresse de livraison.",
+                    "type": "object",
+                    "properties": {
+                        "first_name": {
+                            "description": "Pr\u00e9nom.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "last_name": {
+                            "description": "Nom.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "company": {
+                            "description": "Nom de l&rsquo;entreprise.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "address_1": {
+                            "description": "Adresse ligne 1",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "address_2": {
+                            "description": "Adresse ligne 2",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "city": {
+                            "description": "Nom de la ville.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "state": {
+                            "description": "Code ISO ou nom de l&rsquo;\u00e9tat, province ou quartier.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "postcode": {
+                            "description": "Code postal.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        },
+                        "country": {
+                            "description": "Code pays au format ISO 3166-1 alpha-2.",
+                            "type": "string",
+                            "context": [
+                                "view",
+                                "edit"
+                            ]
+                        }
+                    },
+                    "required": false
+                },
+                "payment_method": {
+                    "description": "ID du moyen de paiement.",
+                    "type": "string",
+                    "required": false
+                },
+                "payment_method_title": {
+                    "description": "Titre du moyen de paiement.",
+                    "type": "string",
+                    "required": false
+                },
+                "transaction_id": {
+                    "description": "ID unique de transaction.",
+                    "type": "string",
+                    "required": false
+                },
+                "meta_data": {
+                    "description": "M\u00e9tadonn\u00e9es.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID m\u00e9ta.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "key": {
+                                "description": "Cl\u00e9 de la m\u00e9ta.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "value": {
+                                "description": "Valeur de la m\u00e9ta.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            }
+                        }
+                    },
+                    "required": false
+                },
+                "line_items": {
+                    "description": "Ligne de donn\u00e9es des articles.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID de l&rsquo;article.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "name": {
+                                "description": "Nom du produit.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "parent_name": {
+                                "description": "Nom du produit parent si le produit est une variation.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "product_id": {
+                                "description": "ID produit.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "variation_id": {
+                                "description": "ID de la variation, si applicable.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "quantity": {
+                                "description": "Quantit\u00e9 command\u00e9.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "tax_class": {
+                                "description": "Classe de taxe de produit.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "subtotal": {
+                                "description": "Ligne de sous-total (avant remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "subtotal_tax": {
+                                "description": "Ligne de sous-total de taxe (avant remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "total": {
+                                "description": "Ligne de total (apr\u00e8s remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "total_tax": {
+                                "description": "Ligne de total de taxe (apr\u00e8s remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "taxes": {
+                                "description": "Ligne de taxe.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID du taux de taxe.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "total": {
+                                            "description": "Total de la taxe.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "subtotal": {
+                                            "description": "Sous-total de la taxe.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "meta_data": {
+                                "description": "M\u00e9tadonn\u00e9es.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID m\u00e9ta.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "key": {
+                                            "description": "Cl\u00e9 de la m\u00e9ta.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "value": {
+                                            "description": "Valeur de la m\u00e9ta.",
+                                            "type": [
+                                                "null",
+                                                "object",
+                                                "string",
+                                                "number",
+                                                "boolean",
+                                                "integer",
+                                                "array"
+                                            ],
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "display_key": {
+                                            "description": "Cl\u00e9 m\u00e9ta pour l\u2019affichage dans l\u2019interface.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "display_value": {
+                                            "description": "Valeur de m\u00e9ta pour l\u2019affichage dans l\u2019interface.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        }
+                                    }
+                                }
+                            },
+                            "sku": {
+                                "description": "UGS du produit.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "price": {
+                                "description": "Tarif du produit.",
+                                "type": "number",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "image": {
+                                "description": "Propri\u00e9t\u00e9s de l\u2019image principale du produit.",
+                                "type": "object",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true,
+                                "properties": {
+                                    "id": {
+                                        "description": "ID de l\u2019image.",
+                                        "type": "integer",
+                                        "context": [
+                                            "view",
+                                            "edit"
+                                        ]
+                                    },
+                                    "src": {
+                                        "description": "URL de l\u2019image.",
+                                        "type": "string",
+                                        "format": "uri",
+                                        "context": [
+                                            "view",
+                                            "edit"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": false
+                },
+                "shipping_lines": {
+                    "description": "Lignes de donn\u00e9es de livraison.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID de l&rsquo;article.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "method_title": {
+                                "description": "Nom du mode d\u2019exp\u00e9dition.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "method_id": {
+                                "description": "ID du mode d\u2019exp\u00e9dition.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "instance_id": {
+                                "description": "ID de l\u2019instance d\u2019exp\u00e9dition.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "total": {
+                                "description": "Ligne de total (apr\u00e8s remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "total_tax": {
+                                "description": "Ligne de total de taxe (apr\u00e8s remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "taxes": {
+                                "description": "Ligne de taxe.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID du taux de taxe.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "total": {
+                                            "description": "Total de la taxe.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        }
+                                    }
+                                }
+                            },
+                            "meta_data": {
+                                "description": "M\u00e9tadonn\u00e9es.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID m\u00e9ta.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "key": {
+                                            "description": "Cl\u00e9 de la m\u00e9ta.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "value": {
+                                            "description": "Valeur de la m\u00e9ta.",
+                                            "type": [
+                                                "null",
+                                                "object",
+                                                "string",
+                                                "number",
+                                                "boolean",
+                                                "integer",
+                                                "array"
+                                            ],
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": false
+                },
+                "fee_lines": {
+                    "description": "Lignes de donn\u00e9es des frais.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID de l&rsquo;article.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "name": {
+                                "description": "Nom des frais.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "tax_class": {
+                                "description": "Classe de taxe de frais.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "tax_status": {
+                                "description": "\u00c9tat de la taxe des frais.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "enum": [
+                                    "taxable",
+                                    "none"
+                                ]
+                            },
+                            "total": {
+                                "description": "Ligne de total (apr\u00e8s remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "total_tax": {
+                                "description": "Ligne de total de taxe (apr\u00e8s remises).",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "taxes": {
+                                "description": "Ligne de taxe.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true,
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID du taux de taxe.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "total": {
+                                            "description": "Total de la taxe.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "subtotal": {
+                                            "description": "Sous-total de la taxe.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        }
+                                    }
+                                }
+                            },
+                            "meta_data": {
+                                "description": "M\u00e9tadonn\u00e9es.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID m\u00e9ta.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "key": {
+                                            "description": "Cl\u00e9 de la m\u00e9ta.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "value": {
+                                            "description": "Valeur de la m\u00e9ta.",
+                                            "type": [
+                                                "null",
+                                                "object",
+                                                "string",
+                                                "number",
+                                                "boolean",
+                                                "integer",
+                                                "array"
+                                            ],
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": false
+                },
+                "coupon_lines": {
+                    "description": "Ligne de donn\u00e9es des codes promo.",
+                    "type": "array",
+                    "items": {
+                        "type": "object",
+                        "properties": {
+                            "id": {
+                                "description": "ID de l&rsquo;article.",
+                                "type": "integer",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "code": {
+                                "description": "Code promo.",
+                                "type": [
+                                    "null",
+                                    "object",
+                                    "string",
+                                    "number",
+                                    "boolean",
+                                    "integer",
+                                    "array"
+                                ],
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ]
+                            },
+                            "discount": {
+                                "description": "Remise totale.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "discount_tax": {
+                                "description": "Taxe totale de la remise.",
+                                "type": "string",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "readonly": true
+                            },
+                            "meta_data": {
+                                "description": "M\u00e9tadonn\u00e9es.",
+                                "type": "array",
+                                "context": [
+                                    "view",
+                                    "edit"
+                                ],
+                                "items": {
+                                    "type": "object",
+                                    "properties": {
+                                        "id": {
+                                            "description": "ID m\u00e9ta.",
+                                            "type": "integer",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ],
+                                            "readonly": true
+                                        },
+                                        "key": {
+                                            "description": "Cl\u00e9 de la m\u00e9ta.",
+                                            "type": "string",
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        },
+                                        "value": {
+                                            "description": "Valeur de la m\u00e9ta.",
+                                            "type": [
+                                                "null",
+                                                "object",
+                                                "string",
+                                                "number",
+                                                "boolean",
+                                                "integer",
+                                                "array"
+                                            ],
+                                            "context": [
+                                                "view",
+                                                "edit"
+                                            ]
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "required": false
+                },
+                "set_paid": {
+                    "default": false,
+                    "description": "D\u00e9termine si la commande est pay\u00e9e. Cela va d\u00e9finir l\u2019\u00e9tat \u00e0 en cours et r\u00e9duire de stock des articles.",
+                    "type": "boolean",
+                    "required": false
+                }
+            }
+        }
+    ],
+    "_links": {
+        "self": [
+            {
+                "href": "https:\/\/flormar.ma\/wp-json\/wc\/v3\/orders"
+            }
+        ]
+    }
+},

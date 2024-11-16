@@ -1,0 +1,25 @@
+.page-link {
+  display: flex;
+  gap: 5px;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.page-link li {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  text-transform: capitalize;
+  font-weight: 700;
+}
+
+.page-link li a {
+  text-decoration: none;
+  color: currentColor;
+
+  cursor: pointer;
+}
+
+.page-link li:first-child {
+  font-weight: 400;
+}

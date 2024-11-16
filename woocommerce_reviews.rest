@@ -1,0 +1,63 @@
+GET https://admin.flormar.ma/wp-json/wc/v3/products HTTP/1.1
+{
+    auth: {
+    username: 'ck_021b3d5a1a8ec96cdd4079042563d1c10c323373',
+    password: 'cs_39ea16c4171474a5479f958a700a6d533ee2d313'
+  }
+}
+
+# Base URL
+@base_url = https://admin.flormar.ma/wp-json/wc/v3
+
+# Authentication
+@auth = Basic ck_021b3d5a1a8ec96cdd4079042563d1c10c323373:cs_39ea16c4171474a5479f958a700a6d533ee2d313
+
+### Get Product
+GET {{base_url}}/products/22217/
+Authorization: {{auth}}
+Content-Type: application/json
+
+### Get All Reviews for a Product
+GET {{base_url}}/products/reviews
+Authorization: {{auth}}
+Content-Type: application/json
+
+{
+  "product_id":22217
+}
+
+### Create a Review
+POST {{base_url}}/products/reviews
+Authorization: {{auth}}
+Content-Type: application/json
+
+{
+  "product_id": 22217,
+  "review": "a review with permission",
+  "reviewer": "rb loo",
+  "reviewer_email": "rb.foo@example.com",
+  "rating": 4,
+  "status": "hold"
+}
+
+### Update a Review
+PUT {{base_url}}/products/reviews/15328
+Authorization: {{auth}}
+Content-Type: application/json
+
+{
+  "review": "Updated2 review content",
+  "rating": 4
+}
+
+### Delete a Review
+DELETE {{base_url}}/products/reviews/15328
+Authorization: {{auth}}
+Content-Type: application/json
+
+
+
+### Delete a Review
+GET https://admin.flormar.ma/wp-json/wp/v2/menu-items/
+Authorization: Basic aWR5YWhpYTp2YlpzIFl0YnggYWxSeSAxZk9EIFJOaWsgY0ZtSg==
+Content-Type: application/json

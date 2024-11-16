@@ -1,0 +1,105 @@
+GET http://localhost/flormar/wp-json/wp/v2/ywdpd_discount
+Authorization: Basic aWR5YWhpYTp2YlpzIFl0YnggYWxSeSAxZk9EIFJOaWsgY0ZtSg==
+
+
+###
+
+GET https://admin.flormar.ma/wp-json/wc/v3/shipping/zones
+Authorization: Basic Y2tfMDIxYjNkNWExYThlYzk2Y2RkNDA3OTA0MjU2M2QxYzEwYzMyMzM3Mzpjc18zOWVhMTZjNDE3MTQ3NGE1NDc5Zjk1OGE3MDBhNmQ1MzNlZTJkMzEz
+
+
+
+
+###
+
+GET https://admin.flormar.ma/wp-json/wc/v3/products/32786
+Authorization: Basic Y2tfMDIxYjNkNWExYThlYzk2Y2RkNDA3OTA0MjU2M2QxYzEwYzMyMzM3Mzpjc18zOWVhMTZjNDE3MTQ3NGE1NDc5Zjk1OGE3MDBhNmQ1MzNlZTJkMzEz
+
+
+###
+
+GET https://admin.flormar.ma/wp-json/wc//wc/store/cart/coupons
+Authorization: Basic Y2tfMDIxYjNkNWExYThlYzk2Y2RkNDA3OTA0MjU2M2QxYzEwYzMyMzM3Mzpjc18zOWVhMTZjNDE3MTQ3NGE1NDc5Zjk1OGE3MDBhNmQ1MzNlZTJkMzEz
+
+
+
+###
+
+GET https://admin.flormar.ma/wp-json/wp/v2/ywdpd_discount/44797
+Authorization: Basic aWR5YWhpYTp2YlpzIFl0YnggYWxSeSAxZk9EIFJOaWsgY0ZtSg==
+
+
+
+###cart
+#####
+###
+
+POST https://admin.flormar.ma/wp-json/custom/v1/calculate_totals
+Content-Type: application/json
+
+{
+             "cart_items": [
+                {
+      "quantity": 10,
+      "product_id": 32447,
+      "variations":
+    }
+             ],
+             "coupon_code": 30,
+             "shipping_method": "flat_rate",
+            "customer_data": {
+                "shipping_postcode":"CASABLANCA"
+          }
+}
+
+
+
+
+###cart
+
+###
+
+POST  https://admin.flormar.ma/wp-json/wc/store/cart/add-item
+Authorization: Basic Y2tfMDIxYjNkNWExYThlYzk2Y2RkNDA3OTA0MjU2M2QxYzEwYzMyMzM3Mzpjc18zOWVhMTZjNDE3MTQ3NGE1NDc5Zjk1OGE3MDBhNmQ1MzNlZTJkMzEz
+Content-Type: application/json
+
+{
+             "cart_items": [
+                {
+      "quantity": 1,
+      "product_id": 32786,
+       "sku":"32795",
+      "variation":{
+"pa_color":"peach",
+"pa_swatches":"immortal-flower"
+      }
+    }
+             ],
+             "coupon_code": 30,
+             "shipping_method": "flexible_shipping"
+}
+
+###
+
+
+#######
+POST https://admin.flormar.ma/wp-json/custom/v1/calculate_totals
+Content-Type: application/json
+
+{
+             "cart_items": [
+                {
+      "quantity": 1,
+      "product_id": 32786,
+       "sku":"31000229-004"
+    }
+             ],
+             "coupon_code": 30,
+             "shipping_method": "flexible_shipping"
+}
+
+
+###
+#update stock
+
+http://admin.flormar.ma/api/update_stock_t1.php

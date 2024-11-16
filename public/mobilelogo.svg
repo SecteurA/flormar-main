@@ -1,0 +1,54 @@
+<svg id="loading" width="13" height="32" viewBox="0 0 13 32" fill="#E45A80" xmlns="http://www.w3.org/2000/svg">
+
+  <style>
+    #f {
+      animation: sticky-f-loader 10s infinite;
+    }
+
+    #circle {
+      animation: sticky-circle-loader 10s infinite;
+    }
+
+    @keyframes sticky-f-loader {
+      0% {
+        transform: translateX(0)
+      }
+
+      10% {
+        transform: translateX(-8px)
+      }
+
+      20% {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(0)
+      }
+    }
+
+    @keyframes sticky-circle-loader {
+      0% {
+        transform: translateX(0)
+      }
+
+      10% {
+        transform: translateX(8px)
+      }
+
+      20% {
+        transform: translateX(0)
+      }
+
+      to {
+        transform: translateX(0)
+      }
+    }
+  </style>
+  <path id="f" fill-rule="evenodd" clip-rule="evenodd"
+    d="M2.79208 31.9873H6.53654V9.35226C6.53654 6.2694 8.94906 3.74057 11.9852 3.55181L11.9954 0C6.77149 0 2.79208 3.91634 2.79208 9.35226V12.9285H0.0371094V17.1949H2.79208V31.9873Z">
+  </path>
+  <path id="circle" fill-rule="evenodd" clip-rule="evenodd"
+    d="M12.8021 15.064C12.8021 13.8455 11.8046 12.8577 10.5739 12.8577C9.34327 12.8577 8.3457 13.8455 8.3457 15.064C8.3457 16.2825 9.34327 17.2703 10.5739 17.2703C11.8046 17.2703 12.8021 16.2825 12.8021 15.064Z">
+  </path>
+</svg>

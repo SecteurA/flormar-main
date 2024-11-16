@@ -1,0 +1,48 @@
+.Info {
+  margin-top: 4rem;
+  margin-bottom: 2.2rem;
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.Info .item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  min-width: 250px;
+  text-align: center;
+  flex: 1;
+}
+
+.Info .item h4 {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  margin-top: 20px;
+}
+
+.Info .item p {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  margin-top: .375rem;
+}
+
+@media (max-width: 573px) {
+  .Info {
+    gap: 0.3rem;
+  }
+  .Info .item {
+    min-width: 150px;
+  }
+
+  .Info .item h4 {
+    font-size: 1rem;
+    line-height: 1.1rem;
+  }
+
+  .Info .item p {
+    font-size: 0.725rem;
+    line-height: 1.15rem;
+  }
+}

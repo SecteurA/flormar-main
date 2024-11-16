@@ -1,0 +1,225 @@
+.Magadins {
+  max-width: 1200px !important;
+}
+
+.Magadins h1 {
+  font-weight: 300;
+  text-align: left !important;
+}
+
+.Magadins iframe {
+  border: none;
+}
+
+.Magadins .flex-filter {
+  display: flex;
+  gap: 1.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.Magadins .flex-filter > * {
+  width: 256px;
+  height: 44px;
+  border: solid 1px #888;
+  /* padding: 0rem 1.75rem; */
+  font-weight: 700;
+
+  cursor: pointer;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.Magadins .css-13cymwt-control {
+  height: 100%;
+  border: none;
+}
+
+.Magadins .Select > div {
+  min-height: 100%;
+  outline: none !important;
+  border: none !important;
+
+  box-shadow: none !important;
+}
+
+.Magadins .find-button {
+  border-radius: 0.25rem;
+  background-color: black;
+  color: white !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.Magadins .find-button:hover {
+  border: solid 1px #222;
+  background-color: transparent;
+  color: black !important;
+}
+
+.Magadins .Select > div:hover {
+  outline: none !important;
+  border: none !important;
+}
+
+.Magadins .Select:hover {
+  border: solid 1px #222;
+}
+
+.Magadins .Select {
+  border-radius: 0;
+}
+
+.Magadins .Select .css-1nmdiq5-menu {
+  border-radius: 0;
+  box-shadow: 0 10px 20px #0004 !important;
+  overflow-y: auto;
+  /* background-color: red; */
+  margin-top: 1px;
+}
+
+.Magadins .Select div[aria-selected='true'] {
+  background-color: transparent;
+  color: #e45a80;
+
+  cursor: pointer;
+}
+
+.Magadins .Select div[aria-selected='false']:hover {
+  background-color: #e45a8020;
+
+  cursor: pointer;
+}
+
+.Magadins .flex-maps {
+  display: flex;
+  gap: 1.75rem;
+}
+
+.Magadins .flex-maps .SelectStore {
+  min-width: 256px;
+  max-width: 256px;
+}
+.Magadins .flex-maps .SelectStore .item:first-child {
+  border-top: solid 1px #eee;
+}
+.Magadins .flex-maps .SelectStore .item {
+  font-size: 0.75rem;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  cursor: pointer;
+  width: 100%;
+  flex-direction: column;
+  border-bottom: solid 1px #eee;
+}
+
+.Magadins .flex-maps .SelectStore .item .item {
+  flex-direction: row;
+  height: 40px;
+  border-bottom: none;
+}
+
+.Magadins .flex-maps .SelectStore .item p {
+  width: 100%;
+  font-size: 0.75rem;
+  margin: 0px 0;
+}
+
+.Magadins .flex-maps .SelectStore .item.close p {
+  display: none;
+}
+
+.Magadins .flex-maps .SelectStore .item svg {
+  font-size: 20px;
+}
+
+.Magadins .flex-maps .SelectStore .item button {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.Magadins .flex-maps .SelectStore .item button span {
+  display: flex;
+  height: 1px;
+  width: 8px;
+  background-color: #000;
+  border-radius: 1px;
+  left: 50%;
+  right: 50%;
+  transform-origin: center;
+  gap: 0;
+  transition: all 0.4s;
+  position: absolute;
+}
+
+.Magadins .flex-maps .SelectStore .item button span {
+  transform: rotate(45deg) translate(-50%, 10%);
+  transition: all 0.4s;
+}
+.Magadins .flex-maps .SelectStore .item button span:last-child {
+  transform: rotate(-45deg) translate(-50%, -10%);
+}
+
+.Magadins .flex-maps .SelectStore .item.active button {
+  border: solid 1px #000;
+}
+
+.Magadins .flex-maps .SelectStore .item.active button span {
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.Magadins .flex-maps .SelectStore .item.active button span:last-child {
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.Magadins .flex-maps .SelectStore .item.open button span {
+  width: 14px;
+  /* height: 2px; */
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+.Magadins .flex-maps .SelectStore .item.open button span:last-child {
+  transform: translate(-50%, -50%) rotate(180deg);
+}
+
+.Magadins .flex-maps .SelectStore .item.close button span {
+  width: 14px;
+  /* height: 2px; */
+  border-radius: 2px;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.Magadins .flex-maps .SelectStore .item.close button span:last-child {
+  transform: translate(-50%, -50%) rotate(90deg);
+}
+
+@media (max-width: 900px) {
+  .Magadins {
+    max-width: 700px !important;
+  }
+  .Magadins .flex-filter {
+    flex-direction: column;
+  }
+
+  .Magadins .flex-filter > * {
+    width: 100%;
+  }
+
+  .Magadins .flex-maps {
+    flex-direction: column;
+  }
+  .Magadins .flex-maps .SelectStore {
+    max-width: 100%;
+  }
+}

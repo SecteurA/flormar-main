@@ -1,0 +1,156 @@
+.Flex-Auth {
+  display: flex;
+  /* width: 100%; */
+  margin-top: 5rem;
+}
+
+.Flex-Auth .Login {
+  flex: 1;
+  padding: 0 4rem;
+}
+
+.line {
+  padding: 1px;
+  border-radius: 2px;
+  background: #dddddd;
+}
+
+.Flex-Auth .Login h3 {
+  font-weight: 300;
+  margin-bottom: 2.25rem;
+  font-size: 24px;
+}
+
+.Flex-Auth .Login .input-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.Flex-Auth .Login label {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 0.5em;
+}
+
+.Flex-Auth .Login input,
+.Flex-Auth .Login select,
+.Flex-Auth .Login textarea {
+  width: 100%;
+  /* max-width: 400px; */
+  --tw-border-opacity: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: #dddddd 1px solid;
+  font-weight: 700;
+  line-height: 1.0625rem;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  font-size: 0.75rem;
+  height: 2.75rem;
+  line-height: 1rem;
+  padding: 0rem 1.125rem;
+  min-width: 200px;
+}
+.Flex-Auth .Login textarea {
+  height: 120px;
+  padding: 1rem 1.125rem;
+}
+
+.Flex-Auth input.err,
+.Flex-Auth textarea.err {
+  border-color: #d72b01 !important;
+}
+
+.Flex-Auth div.err {
+  color: #d72b01;
+  height: 30px;
+  margin-top: 5px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.Flex-Auth .Login input:focus {
+  border-color: #0f0f0f;
+}
+
+.Flex-Auth .Login a {
+  margin-bottom: 20px;
+  display: flex;
+  color: #000;
+}
+
+.Flex-Auth .Login button {
+  color: #000;
+  border: #000 1px solid;
+  width: 100%;
+  height: 44px;
+  font-weight: 700;
+  font-size: 1.125rem;
+
+  cursor: pointer;
+}
+
+.Flex-Auth .Login button:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+.Flex-Auth .Login p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.Flex-Auth .header-app {
+  width: 100%;
+  display: flex;
+  border-bottom: solid 1px #d4d9dd;
+  gap: 20px;
+  min-height: 50px;
+}
+
+.Flex-Auth .header-app li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  color: #d4d9dd;
+
+  cursor: pointer;
+  flex: 1;
+  white-space: nowrap;
+}
+
+.Flex-Auth .header-app li.active,
+.Flex-Auth .header-app li:hover {
+  color: black;
+  border-bottom: solid 1px black;
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .Flex-Auth .Login {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .Flex-Auth {
+    flex-direction: column;
+    gap: 40px;
+    padding: 30px 20px;
+    border: solid 1px #ebebeb;
+    margin-top: 2rem;
+  }
+  .Flex-Auth .Login {
+    padding: 0;
+  }
+}
+
+@media (max-width: 560px) {
+  .Flex-Auth .header-app {
+    flex-direction: column;
+    align-items: flex-start;
+    border-bottom: none;
+  }
+}
